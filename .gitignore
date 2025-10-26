@@ -1,0 +1,32 @@
+# Ignore OS/system files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Ignore log or temp files
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Ignore build/output folders (if created later)
+dist/
+build/
+out/
+
+# Ignore cache folders (browser sync or future tools)
+.cache/
+.vscode/
+.idea/
+
+# Ignore node modules if you ever use npm later
+node_modules/
+
+# Ignore environment or local config
+.env
+.env.local
+.env.*.local
+
+# Optional: temporary or backup files
+*~
