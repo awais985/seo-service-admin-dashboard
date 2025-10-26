@@ -1,0 +1,659 @@
+/* =========================================================
+   🎨 ROOT VARIABLES (Theme Colors & Gradients)
+   ========================================================= */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+    --primary: #11224e;
+    --light: #31467c;
+    --button: #450693;
+    --button-hover: #5a17b8;
+    --text: #ffffff;
+    --linear: linear-gradient(135deg, var(--primary) 0%, #2d2d44 100%);
+}
+
+/* =========================================================
+   🧱 GLOBAL RESET & DEFAULT STYLES
+   ========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    border: 0;
+    outline: 0;
+    appearance: unset;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    color: #fff;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+body {
+    background: var(--linear);
+}
+
+/* =========================================================
+   🧩 CONTAINER BASE STRUCTURE
+   ========================================================= */
+.container {
+    min-height: 100vh;
+}
+
+/* =========================================================
+   🧭 SIDEBAR STYLING
+   ========================================================= */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    padding: 5px 20px;
+    background: var(--primary);
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar #close-menu {
+    display: none;
+}
+
+.sidebar.hidden {
+    left: -250px;
+
+}
+
+.navigation {
+    overflow: auto;
+
+}
+
+.navigation::-webkit-scrollbar {
+    width: 3px;
+}
+
+/* Handle */
+.navigation::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+/* Handle on hover */
+.navigation::-webkit-scrollbar-thumb:hover {
+    background: var(--light);
+}
+
+.sidebar .top {
+    display: flex;
+    margin-top: 12px;
+    justify-content: space-between;
+}
+
+.sidebar .logo {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 1.3rem;
+}
+
+.sidebar .logo a {
+    display: inline-block;
+}
+
+.sidebar .profile {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .profile .text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    color: #ffffff;
+}
+
+.sidebar .profile .face {
+    width: 64px;
+    height: 64px;
+}
+
+.sidebar .profile .face img {
+    border-radius: 50%;
+}
+
+.sidebar .navigation {
+    flex: 1;
+    margin-top: 1rem;
+    padding: 20px 10px;
+    position: relative;
+}
+
+.sidebar .navigation ul {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.sidebar .navigation ul li {
+    margin-bottom: 1rem;
+}
+
+.sidebar .navigation ul li a {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 10px;
+    border-radius: 5px;
+}
+
+.sidebar .navigation ul li a:hover {
+    background: var(--light);
+    transform: translateX(5px);
+}
+
+
+.sidebar .navigation ul li:last-child {
+    margin-top: auto;
+}
+
+/* Sidebar Styling End */
+
+/* Main Styling Start */
+main {
+    margin-left: 250px;
+    margin-top: 2.4rem;
+}
+
+.sidebar.hidden~main {
+    width: 100%;
+    margin-left: 0;
+}
+
+main header {
+    width: calc(100% - 250px);
+    position: fixed;
+    top: 0;
+    left: 250px;
+    display: flex;
+    background: var(--primary);
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+.sidebar.hidden~main header {
+    width: 100%;
+    left: 0;
+}
+
+main header i {
+    color: var(--text);
+    font-size: 1.3rem;
+}
+
+main header .header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.notification-container,
+.message-container,
+.profile-menu-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.notification-container .number,
+.message-container .number {
+    height: 22px;
+    pointer-events: none;
+    width: 22px;
+    background-color: #610909;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: -12px;
+    left: 12px;
+    border: 1px solid #ffffff;
+}
+
+.notification-container .notification-list,
+.message-container .message-list,
+.profile-menu-container .profile-menu-list {
+    background: var(--primary);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50px;
+}
+
+.notification-container .notification-list {
+    right: 188px;
+}
+
+.message-container .message-list {
+    right: 151px;
+}
+
+.profile-menu-container .profile-menu-list {
+    right: 7px;
+    width: 140px;
+}
+
+.notification-container .notification-list.hide,
+.message-container .message-list.hide,
+.profile-menu-container .profile-menu-list.hide {
+    display: none;
+}
+
+.notification-container .notification-list li a,
+.message-container .message-list li a,
+.profile-menu-container .profile-menu-list li a {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 10px 2rem 2px 2px;
+    width: 100%;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.profile-menu-container .profile-menu-list li a .menu {
+    display: flex;
+    gap: 10px;
+}
+
+.notification-container .notification-list li a:hover,
+.message-container .message-list li a:hover,
+.profile-menu-container .profile-menu-list li a:hover {
+    background: var(--light);
+}
+
+.notification-container .notification-list li a::after,
+.message-container .message-list li a::after {
+    content: "";
+    position: absolute;
+    background: var(--text);
+    height: 1px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.notification-container .notification-list li .footer,
+.message-container .message-list li .footer {
+    display: inline;
+    text-align: center;
+    padding: 20px 30px;
+    color: var(--text);
+}
+
+.notification-container .notification-list li a .body,
+.message-container .message-list li a .body {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.notification-container .notification-list li a .text-container,
+.message-container .message-list li a .text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-container .message-list li a .face {
+    width: 32px;
+    height: 32px;
+}
+
+.message-container .message-list li a .face img {
+    border-radius: 50%;
+}
+
+.header-right .profile-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-right .profile-container .text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    color: #ffffff;
+    pointer-events: none;
+    user-select: none;
+}
+
+.header-right .profile-container .face {
+    width: 32px;
+    height: 32px;
+    user-select: none;
+}
+
+.header-right .profile-container .face img {
+    border-radius: 50%;
+}
+
+.dashboard {
+    padding: 15px 25px;
+    color: var(--text);
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 25px;
+    margin-top: 20px;
+
+}
+
+.card {
+    border-radius: 10px;
+    background: var(--primary);
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card .card-heading {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.card .card-content {
+    margin-top: 1.2rem;
+}
+
+.card .number .date {
+    border-radius: 5px;
+    color: #ffffff;
+    border: 1px solid;
+    padding: 10px;
+}
+
+.card .number .date option {
+    background: var(--primary);
+}
+
+.card .number {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card .card-content #clients,
+.card .card-content #projects,
+.card .card-content #keywords {
+    width: 100% !important;
+    height: 200px !important;
+}
+
+
+
+.card .trend {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+    font-size: 1rem;
+    font-weight: 600;
+    gap: 10px;
+}
+
+.up {
+    color: #12bb09;
+}
+
+.down {
+    color: #bb0909;
+}
+
+
+.charts-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 2rem;
+}
+
+
+.row2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.charts-container canvas,
+.row2 canvas {
+    width: 100% !important;
+}
+
+#clientsGrowthChart {
+    height: 600px !important;
+}
+
+#projectsTrendChart,
+#revenueChart {
+    height: 250px !important;
+}
+
+.sidebar.hidden~main .charts-container canvas,
+.sidebar.hidden~main .row2 canvas {
+    width: 10px;
+}
+
+.recent-activity {
+    margin-top: 2rem;
+    background: var(--primary);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+}
+
+.recent-activity h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.recent-activity table {
+    width: 100%;
+}
+
+.recent-activity table th {
+    text-align: left;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #CBD5E1;
+    border-bottom: 1px solid #2F2F40;
+}
+
+.recent-activity table td {
+    padding: 12px;
+    font-size: 14px;
+    color: #E2E8F0;
+}
+
+.recent-activity td:nth-child(4) {
+    font-weight: 600;
+}
+
+.recent-activity td:nth-child(4)[data-status="completed"] {
+    color: #12bb09;
+}
+
+.recent-activity td:nth-child(4)[data-status="pending"] {
+    color: #bb8309;
+}
+
+.recent-activity td:nth-child(4)[data-status="read"] {
+    color: #0983bb;
+}
+
+/* Main Styling End */
+
+/* Footer Styling Start */
+.footer {
+    background: var(--primary);
+    grid-column: span 2;
+    margin-left: 250px;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--text);
+}
+
+.sidebar.hidden~.footer {
+    margin-left: 0;
+}
+
+.footer .credit a {
+    color: #ffffffaf;
+}
+
+/* Footer Styling End */
+
+/* Tablet Screens (<= 1024px) */
+@media (max-width: 1024px) {
+    main {
+        margin-left: 200px;
+    }
+
+    main header {
+        width: calc(100% - 200px);
+        left: 200px;
+    }
+
+    .sidebar {
+        width: 200px;
+        padding: 10px;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #clientsGrowthChart {
+        height: 400px !important;
+    }
+}
+
+/* Mobile Landscape (<= 768px) */
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        left: -250px;
+        z-index: 1000;
+        transition: left 0.3s ease;
+    }
+
+    .sidebar.show {
+        left: 0;
+    }
+
+    .sidebar #close-menu {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 0;
+        text-align: right;
+        margin-left: 15px;
+        color: #ffffff;
+    }
+
+    .sidebar .toggle-menu i {
+        color: var(--text);
+        font-size: 1.3rem;
+    }
+
+
+    main {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+    main header {
+        width: 100%;
+        left: 0;
+        justify-content: space-between;
+        padding: 10px 15px;
+    }
+
+    .header-right .text {
+        display: none;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .row2 {
+        grid-template-columns: 1fr;
+    }
+
+    #clientsGrowthChart {
+        height: 300px !important;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+/* Small Phones (<= 480px) */
+@media (max-width: 480px) {
+    .sidebar {
+        width: 220px;
+    }
+
+    .sidebar .profile .text {
+        display: none;
+    }
+
+    main header .toggle-menu-btn i {
+        font-size: 1.5rem;
+    }
+
+    .notification-container .notification-list,
+    .message-container .message-list,
+    .profile-menu-container .profile-menu-list {
+        width: 100%;
+        right: 0;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card .number h3 {
+        font-size: 1.4rem;
+    }
+
+    .recent-activity table th,
+    .recent-activity table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
