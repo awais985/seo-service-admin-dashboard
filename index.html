@@ -1,32 +1,49 @@
 <!DOCTYPE html>
+<!--
+  Template by Awais Javeed | MIT License
+  GitHub: https://github.com/awais985/seo-service-admin-dasnoard
+-->
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Information -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page Title -->
     <title>SeoService Dashboard</title>
+
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="/css/style.css" />
 </head>
 
 <body>
     <div class="container">
+        <!-- ===== Sidebar Section ===== -->
         <aside class="sidebar">
+            <!-- Logo Section -->
             <div class="top">
                 <div class="logo">
                     <a href="#">SeoService</a>
                 </div>
             </div>
+
+            <!-- Sidebar Close Button (Mobile) -->
             <div class="toggle-menu" id="close-menu">
                 <button class="toggle-menu-btn">
                     <i class="fa-solid fa-x"></i>
                 </button>
             </div>
+
+            <!-- Profile Section -->
             <div class="profile">
                 <div class="face">
-                    <img src="https://i.pravatar.cc/150?img=3" alt="Awais Javeed">
+                    <img src="https://i.pravatar.cc/150?img=3" alt="Awais Javeed" />
                 </div>
                 <div class="text">
                     <span class="name">Awais Javeed</span>
@@ -34,23 +51,44 @@
                 </div>
             </div>
 
+            <!-- Sidebar Navigation Links -->
             <nav class="navigation">
                 <ul>
-                    <li><a href="#">Dashboard <i class="fa-solid fa-house"></i></a></li>
-                    <li><a href="#">Clients <i class="fa-solid fa-users"></i></a></li>
-                    <li><a href="#">Projects <i class="fa-solid fa-briefcase"></i></a></li>
-                    <li><a href="#">Analytics <i class="fa-solid fa-chart-line"></i></a></li>
-                    <li><a href="#">Reports <i class="fa-solid fa-file-lines"></i></a></li>
-                    <li><a href="#">Messages <i class="fa-solid fa-message"></i></a></li>
-                    <li><a href="#">Settings <i class="fa-solid fa-gear"></i></a></li>
-                    <li class="logout"><a href="#">Logout <i class="fa-solid fa-right-from-bracket"></i></a></li>
+                    <li>
+                        <a href="#">Dashboard <i class="fa-solid fa-house"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">Clients <i class="fa-solid fa-users"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">Projects <i class="fa-solid fa-briefcase"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">Analytics <i class="fa-solid fa-chart-line"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">Reports <i class="fa-solid fa-file-lines"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">Messages <i class="fa-solid fa-message"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">Settings <i class="fa-solid fa-gear"></i></a>
+                    </li>
+                    <li class="logout">
+                        <a href="#">Logout <i class="fa-solid fa-right-from-bracket"></i></a>
+                    </li>
                 </ul>
             </nav>
         </aside>
+        <!-- ===== End Sidebar ===== -->
 
+        <!-- ===== Main Content Section ===== -->
         <main>
+            <!-- ===== Header Section ===== -->
             <header>
                 <div class="header-left">
+                    <!-- Sidebar Toggle Button -->
                     <div class="toggle-menu" id="open-btn">
                         <button class="toggle-menu-btn">
                             <i class="fa-solid fa-bars"></i>
@@ -59,12 +97,14 @@
                 </div>
 
                 <div class="header-right">
-                    <!-- Notifications -->
+                    <!-- ===== Notifications ===== -->
                     <div class="notification-container">
                         <button class="notification-btn">
                             <i class="fa-solid fa-bell"></i>
                         </button>
                         <div class="number">2</div>
+
+                        <!-- Notification Dropdown List -->
                         <ul class="notification-list hide">
                             <li>
                                 <a href="#">
@@ -104,18 +144,20 @@
                         </ul>
                     </div>
 
-                    <!-- Messages -->
+                    <!-- ===== Messages Section ===== -->
                     <div class="message-container">
                         <button class="message-btn">
                             <i class="fa-solid fa-message"></i>
                         </button>
                         <div class="number">2</div>
+
+                        <!-- Message Dropdown List -->
                         <ul class="message-list hide">
                             <li>
                                 <a href="#">
                                     <div class="body">
                                         <div class="face">
-                                            <img src="https://i.pravatar.cc/150?img=1" alt="Awais">
+                                            <img src="https://i.pravatar.cc/150?img=1" alt="Awais" />
                                         </div>
                                         <div class="text-container">
                                             <span>Awais sent you a message</span>
@@ -128,7 +170,7 @@
                                 <a href="#">
                                     <div class="body">
                                         <div class="face">
-                                            <img src="https://i.pravatar.cc/150?img=2" alt="Salman">
+                                            <img src="https://i.pravatar.cc/150?img=2" alt="Salman" />
                                         </div>
                                         <div class="text-container">
                                             <span>Salman sent you a message</span>
@@ -141,7 +183,7 @@
                                 <a href="#">
                                     <div class="body">
                                         <div class="face">
-                                            <img src="https://i.pravatar.cc/150?img=4" alt="Kamran">
+                                            <img src="https://i.pravatar.cc/150?img=4" alt="Kamran" />
                                         </div>
                                         <div class="text-container">
                                             <span>Kamran sent you a message</span>
@@ -158,63 +200,49 @@
                         </ul>
                     </div>
 
-                    <!-- Profile -->
+                    <!-- ===== Profile Dropdown ===== -->
                     <div class="profile-container">
                         <button class="profile-btn">
                             <div class="face">
-                                <img src="https://i.pravatar.cc/150?img=5" alt="Awais Javeed">
+                                <img src="https://i.pravatar.cc/150?img=5" alt="Awais Javeed" />
                             </div>
                         </button>
                         <div class="text">
                             <span class="name">Awais Javeed</span>
                         </div>
 
+                        <!-- Profile Dropdown Menu -->
                         <div class="profile-menu-container">
                             <ul class="profile-menu-list hide">
                                 <li>
-                                    <a href="#">
-                                        <div class="menu">
-                                            <i class="fa-solid fa-user"></i> <span>Profile</span>
-                                        </div>
-                                    </a>
+                                    <a href="#"><i class="fa-solid fa-user"></i> <span>Profile</span></a>
                                 </li>
                                 <li>
-                                    <a href="#">
-                                        <div class="menu">
-                                            <i class="fa-solid fa-envelope"></i> <span>Inbox</span>
-                                        </div>
-                                    </a>
+                                    <a href="#"><i class="fa-solid fa-envelope"></i>
+                                        <span>Inbox</span></a>
                                 </li>
                                 <li>
-                                    <a href="#">
-                                        <div class="menu">
-                                            <i class="fa-solid fa-gear"></i> <span>Settings</span>
-                                        </div>
-                                    </a>
+                                    <a href="#"><i class="fa-solid fa-gear"></i> <span>Settings</span></a>
                                 </li>
                                 <li>
-                                    <a href="#">
-                                        <div class="menu">
-                                            <i class="fa-solid fa-circle-question"></i> <span>Help</span>
-                                        </div>
-                                    </a>
+                                    <a href="#"><i class="fa-solid fa-circle-question"></i>
+                                        <span>Help</span></a>
                                 </li>
                                 <li>
-                                    <a href="#">
-                                        <div class="menu">
-                                            <i class="fas fa-sign-out"></i> <span>Logout</span>
-                                        </div>
-                                    </a>
+                                    <a href="#"><i class="fas fa-sign-out"></i> <span>Logout</span></a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </header>
+            <!-- ===== End Header ===== -->
 
+            <!-- ===== Dashboard Section ===== -->
             <section class="dashboard">
+                <!-- ===== Stats Cards ===== -->
                 <div class="card-container">
-                    <!-- 1 Row-->
+                    <!-- Single Card: Active Clients -->
                     <div class="card">
                         <div class="card-heading">
                             <h3>Active Clients</h3>
@@ -236,6 +264,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Single Card: Total Projects -->
                     <div class="card">
                         <div class="card-heading">
                             <h3>Total Projects</h3>
@@ -257,6 +287,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Single Card: Pending Reports -->
                     <div class="card">
                         <div class="card-heading">
                             <h3>Pending Reports</h3>
@@ -278,22 +310,25 @@
                             </div>
                         </div>
                     </div>
-                    <!-- 1 Row-->
                 </div>
-                <!-- Cards Row -->
+                <!-- ===== End Cards ===== -->
 
-
-                <!-- Charts Row -->
+                <!-- ===== Charts Section ===== -->
                 <div class="charts-container">
+                    <!-- Line Chart -->
                     <div class="chart-card">
                         <h4>Clients Growth</h4>
-                        <canvas id="clientsGrowthChart" style="width: 100px; height: 100px;"></canvas>
+                        <canvas id="clientsGrowthChart"></canvas>
                     </div>
+
                     <div class="row2">
+                        <!-- Bar Chart -->
                         <div class="chart-card">
                             <h4>Projects Trend</h4>
                             <canvas id="projectsTrendChart"></canvas>
                         </div>
+
+                        <!-- Pie Chart -->
                         <div class="chart-card">
                             <h4>Revenue Trend</h4>
                             <canvas id="revenueChart"></canvas>
@@ -301,7 +336,7 @@
                     </div>
                 </div>
 
-                <!-- Recent Activity Table -->
+                <!-- ===== Recent Activity Table ===== -->
                 <div class="recent-activity">
                     <h3>Recent Client Activity</h3>
                     <table>
@@ -336,17 +371,27 @@
                     </table>
                 </div>
             </section>
+            <!-- ===== End Dashboard ===== -->
         </main>
 
+        <!--
+            Template by Awais Javeed | MIT License
+            GitHub: https://github.com/awais985/seo-service-admin-dasnoard
+        -->
+        <!-- ===== Footer Section ===== -->
         <footer class="footer">
             <div class="copyright">
                 <span>© Awais Javeed, All Right Reserved.</span>
             </div>
             <div class="credit">
-                <span>Designed By <a href="https://github.com/awais985">Awais Javeed</a></span>
+                <span>Designed By
+                    <a href="https://github.com/awais985">Awais Javeed</a></span>
             </div>
         </footer>
+        <!-- ===== End Footer ===== -->
     </div>
+
+    <!-- ===== External Scripts ===== -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/main.js"></script>
     <script src="js/chart.js"></script>
